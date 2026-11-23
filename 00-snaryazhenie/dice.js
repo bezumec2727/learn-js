@@ -24,7 +24,21 @@ let bonus = 0;
 if (formula.includes("+")) {
   bonus = Number(right[1]);
 }
-
 console.log("Количество костей:", count);
 console.log("Тип кости: d" + sides);
 console.log("Бонус:", bonus);
+
+
+let rolls = [0];
+
+
+for (let i = 0; i < count; i++) {  
+  let result = Number(Math.floor(Math.random() * sides) + 1)
+  rolls.push (result);
+  let sum = sum + result;
+  return rolls, sum, result;
+}
+
+console.log("[" + rolls.join(", ") + "]")
+console.log(rolls[0])
+console.log(sum)
