@@ -29,16 +29,15 @@ console.log("Тип кости: d" + sides);
 console.log("Бонус:", bonus);
 
 
-let rolls = [0];
+const rolls = [];
+let sum = 0;
 
 
 for (let i = 0; i < count; i++) {  
-  let result = Number(Math.floor(Math.random() * sides) + 1)
-  rolls.push (result);
-  let sum = sum + result;
-  return rolls, sum, result;
+  let result = rollDie(sides);
+  rolls.push(result);
+  sum =+ result;
 }
 
-console.log("[" + rolls.join(", ") + "]")
-console.log(rolls[0])
-console.log(sum)
+const total = sum + bonus
+console.log("🎲 " + formula + ": [" + rolls.join(", ") + "] + " + bonus + " = " + total);
