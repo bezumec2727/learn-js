@@ -18,11 +18,11 @@ if (formula.includes("d")) {
   const right = numbers[1].split("+");
 
   let count = Number(numbers[0]);
-  if (Number(numbers[0] === "")) {
+  if (numbers[0] === "") {
     count = 1
   }
   const sides = Number(right[0]);
-  let bonus = Number(0);
+  let bonus = 0;
 
   if (formula.includes("+")) {
     bonus = Number(right[1]);
@@ -51,10 +51,10 @@ if (formula.includes("d")) {
   for (let i = 0; i < count; i++) {
     let result = rollDie(sides);
     if (sides === 20) {
-      if (result == 20) {
+      if (result === 20) {
         console.log("💥 КРИТ!")
       }
-      if (result == 1) {
+      if (result === 1) {
         console.log("💀 Провал!")
       }
     }
