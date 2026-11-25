@@ -1,14 +1,9 @@
-const count = process.argv[2];
+const count = Number(process.argv[2]);
 
 if (!count) {
     console.log("Введите число.");
     process.exit(1);
   }
-
-if (typeof count !== 'number') {
-    console.log("Введите число, а не буквы.");
-    process.exit(1);
-}
 
 console.log("Бросков:", count);
 
