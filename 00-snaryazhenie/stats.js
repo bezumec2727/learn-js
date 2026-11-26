@@ -12,7 +12,6 @@ function roll20() {
     return roll;
   }
 
-const rolls = []
 let pcrit = 0
 let ncrit = 0
 let sum = 0
