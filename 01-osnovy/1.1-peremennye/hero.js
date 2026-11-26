@@ -4,6 +4,7 @@ const name = "Хэлли"
 const prof = "Бард"
 let level = Number(1)
 let hp = Number(10)
+let goldInSilver = 105
 
 function levelUp() {
     level += 1
@@ -15,5 +16,8 @@ function levelUp() {
 if (askForLevel === "+") {
     levelUp()
 }
-console.log(typeof hp + typeof level)
+
+goldInSilver += 1 * 3
+
 console.log(name + " (" + prof + "), уровень " + level + ". Текущее здоровье: " + hp)
+console.log(Math.floor(goldInSilver / 10) + " зм, " + goldInSilver % 10 + " см.")
